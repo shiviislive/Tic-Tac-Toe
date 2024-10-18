@@ -1,0 +1,87 @@
+/* General reset for padding, margin, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling to center the game and set font */
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: teal;
+    margin: 0;
+}
+
+/* Heading styling */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Container for centering the game board */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game board styling */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columns of 100px each */
+    grid-template-rows: repeat(3, 100px);    /* 3 rows of 100px each */
+    grid-gap: 10px;
+}
+
+/* Individual boxes (cells) styling */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for boxes */
+.box:hover {
+    background-color: #eee;
+}
+
+/* Player X and O color styles */
+.box.x {
+    color: #ff4500;
+}
+
+.box.o {
+    color: #4169e1;
+}
+
+#resetbtn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resetbtn:hover {
+    background-color: #d32f2f;
+}
